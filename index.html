@@ -158,6 +158,23 @@
     .footer-note a:hover {
       text-decoration: underline;
     }
+
+    /* One-liner below each project title */
+    .project-tagline {
+      display: block;
+      margin: 6px 0 8px;
+      font-style: italic;
+      color: #555;
+    }
+
+    /* Optional: make the <summary> look like a link */
+    details summary {
+      cursor: pointer;
+      color: var(--accent-color);
+      font-weight: 500;
+      margin-top: 4px;
+    }
+
   </style>
 </head>
 <body>
@@ -177,7 +194,10 @@
               <a href="#experience" target="_self">Experience</a>
             </td>
             <td>
-              <a href="#projects" target="_self">Projects</a>
+              <a href="#publication" target="_self">Research</a>
+            </td>
+            <td>
+              <a href="#project" target="_self">Projects</a>
             </td>
             <td>
               <a href="#education" target="_self">Education</a>
@@ -192,8 +212,9 @@
               <p class="profile-text">
                 <name>Harsha Vardhan</name>
               </p>
+              
               <p>
-                I am currently a founding engineer at a stealth-stage startup, building AI Agents for marketing. I recently graduated from NYU’s Courant Institute of Mathematical Sciences and Stern School of Business, where I focused on the intersection of computing and entrepreneurship. My broader interests lie in AI Agents and computer vision, and I previously worked as a research assistant at MBZUAI on image restoration and video action recognition. When I’m not coding or exploring AI frontiers, you’ll often find me immersed in sci-fi worlds or battling it out in Dota.
+                A machine learning engineer passionate about building AI systems that solve real-world problems. Recently completed a Master’s in Data Science from Rutgers University, where I focused on applied machine learning, backend systems, and end-to-end product development. Prior to that, I founded Autodub, a speech translation startup that was acqui-hired by Khabri (YC W19), where I worked as a founding ML engineer building large-scale audio intelligence tools. My interests lie in AI agents, foundation models, and the evolving role of intelligent systems in everyday workflows. When I’m not working, you’ll probably find me exploring authentic restaurants around town or hunting down the next great meal.
               </p>
               <p class="profile-links">
                 <a href="mailto:harsha.autodub@gmail.com">Email</a> /
@@ -206,7 +227,7 @@
             <td style="width:40%; text-align:center;">
               <a href="images/JonBarron.jpg">
                 <img 
-                  src="images/mickey-5.jpeg" 
+                  src="images/harsha.jpg" 
                   alt="profile photo" 
                   class="profile-img"
                 />
@@ -270,7 +291,7 @@
               <p>
                 <strong>Founder</strong>
                 <span style="float:right">April 2018 - Dec 2020</span><br>
-                <em><a href="https://autodub.in/#team" target="_blank">Autodub</a></em><br>
+                <em><a href="https://autodub.in/" target="_blank">Autodub</a></em><br>
                 Software: Pytorch, Python, HF-Transformers, SQL, Tensorflow, Docker
               </p>
             </td>
@@ -279,58 +300,104 @@
 
         <!-- Publication Section -->
         <a id="publication">
-          <heading>Projects</heading>
+          <heading>Research</heading>
         </a>
         <table class="info-table">
           <tr>
             <td width="15%" align="center">
-              <img src="images/prompt-ir.png" alt="PromptIR" class="publication-img">
+              <img src="images/llm_capabalities.png" alt="llm Capabalities" class="publication-img">
             </td>
             <td width="85%">
-              <papertitle>PromptIR: Prompting for All-in-One Blind Image Restoration</papertitle><br>
-              <strong>Vaishnav Rao Potlapalli</strong>,
-              Syed Waqas Zamir,
-              Salman Khan,
-              Fahad Shahbaz Khan<br>
-              <em>NeurIPS, 2023</em><br>
-              <a href="https://github.com/va1shn9v/PromptIR">Code</a> /
-              <a href="https://arxiv.org/abs/2306.13090">Paper</a>
+              <papertitle>Large Language Models: A survey on Use-case-Mapping & Evaluations</papertitle><br>
+              Zihan Xu,
+              <strong>Harsha Vardhan</strong>,
+              Mhamed Bettaieb,
+              <br>
+              <em>Research ongoing — Paper in preparation</em><br>
+            </td>
+          </tr>
+        </table>
+
+        <!-- Publication Section -->
+        <a id="project">
+          <heading>Projects</heading>
+        </a>
+        <table class="info-table">
+          
+          <tr>
+            <td width="15%" align="center">
+              <img src="images/cshorts.png" alt="CSHORTS logo" class="publication-img">
+            </td>
+          
+            <td width="85%">
+              <papertitle>CSHORTS – AI NEWS SUMMARIZATION PLATFORM</papertitle><br>
+          
+              <!-- one-line summary -->
+              <span class="project-tagline">
+                Real-time, category-based news digests delivered in under 60 seconds.
+              </span>
+          
+              <!-- collapsible detail block -->
+              <details>
+                <summary>More details</summary>
+                <ul>
+                  <li>Fine-tuned &amp; 8-bit-quantized a T5 model, slicing model
+                      size by <strong>45 %</strong> while preserving ROUGE-L.</li>
+                  <li>Deployed on <strong>AWS SageMaker</strong> with autoscaling &
+                      CloudWatch monitoring.</li>
+                  <li>Built a <strong>FastAPI</strong> micro-service to ingest content, clean
+                      HTML, and store articles + summaries in
+                      <strong>MongoDB Atlas</strong>.</li>
+                  <li>Streamlit front-end groups stories into Trending, Business,
+                      Tech &amp; AI, Entertainment, Sports, USA, and India tabs;
+                      end-to-end latency &lt; 60 s.</li>
+                  <li>Containerised with <strong>Docker</strong> &amp; CI/CD via
+                      <strong>GitHub Actions</strong>.</li>
+                </ul>
+              </details>
+          
+              <!-- demo / repo links -->
+              <a href="https://github.com/harshav1999/CShorts">Code</a> /
+              <a href="https://cshorts.streamlit.app/">Live demo</a>
             </td>
           </tr>
 
           <tr>
             <td width="15%" align="center">
-              <img src="images/CVPR22_4_1.jpeg" alt="Sketch3T" class="publication-img">
+              <img src="images/etas.png" alt="Ticket Triage System" class="publication-img">
             </td>
+          
             <td width="85%">
-              <papertitle>Sketch3T: Test-time Training for Zero-Shot SBIR</papertitle><br>
-              Aneeshan Sain,
-              Ayan Kumar Bhunia,
-              <strong>Vaishnav Rao Potlapalli</strong>,
-              Pinaki Nath Chowdhury,
-              Tao Xiang,
-              Yi-Zhe Song<br>
-              <em>CVPR, 2022</em><br>
-              <a href="https://arxiv.org/abs/2203.14691">Paper</a>
+              <papertitle>ENTERPRISE TICKET TRIAGE AUTOMATION SYSTEM</papertitle><br>
+              <em>Data & Statistical Services Lab, Princeton University — funded by Chase Bank</em><br>
+          
+              <!-- one-line summary -->
+              <span class="project-tagline">
+                AI-driven router that assigns and prioritizes support tickets with&nbsp;&gt; 90 % accuracy.
+              </span>
+          
+              <!-- collapsible detail block -->
+              <details>
+                <summary>More details</summary>
+                <ul>
+                  <li>Fine-tuned <strong>MiniLM</strong> embeddings + <strong>CatBoost</strong> classifier to route
+                      tickets to the correct resolver teams and predict priority levels.</li>
+                  <li>Achieved over <strong>90 % macro-F1</strong> on both classification tasks
+                      across a 1 M-ticket dataset.</li>
+                  <li>Built a real-time <strong>FastAPI</strong> service that scores incoming
+                      tickets and publishes results to internal queues (Kafka).</li>
+                  <li>Developed a lightweight <strong>Streamlit</strong> dashboard for Support Ops to
+                      search, monitor, and override triage decisions in-flight.</li>
+                  <li>Implemented role-based access, audit logging, and encrypted data-at-rest
+                      to meet Chase’s security requirements.</li>
+                </ul>
+              </details>
             </td>
           </tr>
+          
 
-          <tr>
-            <td width="15%" align="center">
-              <img src="images/meditables_img.jpeg" alt="MediTables" class="publication-img">
-            </td>
-            <td width="85%">
-              <papertitle>
-                MediTables: A New Dataset and Deep Network for Multi-Category Table Localization in Medical Documents
-              </papertitle><br>
-              Akshay Deshpande,
-              <strong>Vaishnav Rao Potlapalli</strong>,
-              Ravi Kiran Sarvadevabhatla<br>
-              <em>ICDARW - GREC, 2021</em><br>
-              <a href="https://github.com/atmacvit/meditables">Code</a> /
-              <a href="https://link.springer.com/chapter/10.1007/978-3-030-86198-8_9">Paper</a>
-            </td>
-          </tr>
+          
+          
         </table>
 
         <!-- Education Section -->
@@ -345,7 +412,7 @@
             <td width="85%">
               <p>
                 <strong>MS in Data Science</strong>
-                <span style="float:right">Sep 2023 - Dec 2024</span><br>
+                <span style="float:right">Sep 2023 - April 2024</span><br>
                 <em><a href="https://mps.rutgers.edu/data-science/" target="_blank">Rutgers University</a></em>
               </p>
             </td>
@@ -370,7 +437,7 @@
 
         <!-- Footer -->
         <p class="footer-note">
-          Updated on: 14th April, 2025
+          Updated on: May 1st, 2025
           <span style="float:right;">
           </span>
         </p>
