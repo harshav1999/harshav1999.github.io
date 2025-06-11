@@ -214,7 +214,7 @@
               </p>
               
               <p>
-                A machine learning engineer passionate about building AI systems that solve real-world problems. Recently completed a Master’s in Data Science from Rutgers University, where I focused on applied machine learning, backend systems, and end-to-end product development. Prior to that, I founded Autodub, a speech translation startup that was acqui-hired by Khabri (YC W19), where I worked as a founding ML engineer building large-scale audio intelligence tools. My interests lie in AI agents, foundation models, and the evolving role of intelligent systems in everyday workflows. When I’m not working, you’ll probably find me exploring authentic restaurants around town or hunting down the next great meal.
+                A machine learning engineer passionate about building AI systems that solve real-world problems. Recently completed a Master's in Data Science from Rutgers University, where I focused on applied machine learning, backend systems, and end-to-end product development. Prior to that, I founded Autodub, a speech translation startup that was acqui-hired by Khabri (YC W19), where I worked as a founding ML engineer building large-scale audio intelligence tools. My interests lie in AI agents, foundation models, and the evolving role of intelligent systems in everyday workflows. When I'm not working, you'll probably find me exploring authentic restaurants around town or hunting down the next great meal.
               </p>
               <p class="profile-links">
                 <a href="mailto:harsha.autodub@gmail.com">Email</a> /
@@ -227,7 +227,7 @@
             <td style="width:40%; text-align:center;">
               <a href="images/JonBarron.jpg">
                 <img 
-                  src="images/harsha.jpg" 
+                  src="images/harsha.png" 
                   alt="profile photo" 
                   class="profile-img"
                 />
@@ -323,6 +323,36 @@
           <heading>Projects</heading>
         </a>
         <table class="info-table">
+
+          <tr>
+            <td width="15%" align="center">
+              <img src="images/gensavez.jpeg" alt="GensaveZ logo" class="publication-img">
+            </td>
+          
+            <td width="85%">
+              <papertitle>MR MOOLAH — PERSONAL FINANCE AI AGENT</papertitle><br>
+          
+              <!-- one-line summary -->
+              <span class="project-tagline">
+                Track your spending, compare with peers, and invest smarter with real-time, LLM-powered insights.
+              </span>
+          
+              <!-- collapsible detail block -->
+              <details>
+                <summary>More details</summary>
+                <ul>
+                  <li>Fine-tuned Llama 3.1-70B with LoRA adapters on AWS SageMaker distributed training (FSDP, 8 × A100 80 GB), cutting memory footprint by 65 % and improving domain-specific perplexity by 18 %.</li>
+                  <li>Served the model behind a FastAPI gateway on a SageMaker Large-Model-Inference (Inf2.48xlarge) endpoint, delivering streaming responses (< 150 ms for 512 tokens).</li>
+                  <li>Built a LangChain RAG agent that classifies transactions, pulls peer benchmarks from a Pinecone vector store, and generates personalized budgeting + asset-allocation advice.</li>
+                  <li>Integrated Plaid OAuth to fetch live bank/credit-card data; implemented PII hashing and AWS KMS encryption-at-rest across PostgreSQL + S3.</li>
+                </ul>
+              </details>
+          
+              <!-- demo / repo links -->
+              
+              <a href="https://www.gensavez.com/">Website</a>
+            </td>
+          </tr>
           
           <tr>
             <td width="15%" align="center">
@@ -389,11 +419,13 @@
                   <li>Developed a lightweight <strong>Streamlit</strong> dashboard for Support Ops to
                       search, monitor, and override triage decisions in-flight.</li>
                   <li>Implemented role-based access, audit logging, and encrypted data-at-rest
-                      to meet Chase’s security requirements.</li>
+                      to meet Chase's security requirements.</li>
                 </ul>
               </details>
             </td>
           </tr>
+
+          
           
 
           
@@ -437,7 +469,7 @@
 
         <!-- Footer -->
         <p class="footer-note">
-          Updated on: May 1st, 2025
+          Updated on: June 11th, 2025
           <span style="float:right;">
           </span>
         </p>
